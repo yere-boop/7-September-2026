@@ -1681,3 +1681,63 @@ html, body { overflow-x: hidden; max-width: 100vw; }
     opacity: 0.5 !important;
   }
 }
+
+/* ==========================================
+   HERO SCROLL HINT — Center Fix Mobile
+   ========================================== */
+.hero__scroll-hint {
+  position: absolute !important;
+  bottom: 2rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: auto !important;
+}
+
+@media (max-width: 768px) {
+  .hero__scroll-hint {
+    bottom: 1.5rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: max-content !important;
+  }
+
+  .hero__scroll-hint span:first-child {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .hero__scroll-hint .scroll-line {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/* ==========================================
+   SCROLL HINT — Center Fix Mobile
+   ========================================== */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+}
+
+@media (max-width: 768px) {
+  .hero__scroll-hint {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 2rem !important;
+  }
+}
