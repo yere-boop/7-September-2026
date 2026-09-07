@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In Loving Memory of BUBU 🐾</title>
+  <meta name="description"
+    content="Halaman kenangan untuk mengenang BUBU, sahabat setia kami yang telah meninggalkan jejak cinta abadi di hati kami. Forever in our hearts." />
+  <meta name="theme-color" content="#FDF6EC" />
+
+  <!-- Favicon (paw emoji fallback) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================
+       ENTRANCE OVERLAY — Click to enter & play music
+       ============================================ -->
+  <div class="entrance-overlay" id="entrance-overlay">
+    <div class="entrance__content">
+      <div class="entrance__paw">🐾</div>
+      <h2 class="entrance__title">In Loving Memory</h2>
+      <p class="entrance__name">BUBU</p>
+      <p class="entrance__subtitle">7 September 2026</p>
+      <button class="entrance__btn" id="entrance-btn">
+        <span class="entrance__btn-icon">♪</span>
+        Masuk & Putar Musik
+      </button>
+      <p class="entrance__note">John Mayer — You're Gonna Live Forever In Me</p>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       SECTION 1 — HERO
+       ============================================ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="images/hero-bubu.png?v=2" alt="BUBU — foto utama" loading="eager" fetchpriority="high" />
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <p class="hero__subtitle-top">In Loving Memory</p>
+      <h1 class="hero__name">BUBU</h1>
+      <p class="hero__dates">✦ &ensp; — 7 September 2026 &ensp; ✦</p>
+      <p class="hero__tagline">"Kau bukan hanya anjing, kau adalah keluarga."</p>
+    </div>
+
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="scroll-line"></span>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       PAW DIVIDER
+       ============================================ -->
+  <div class="paw-divider" aria-hidden="true">🐾</div>
+
+
+  <!-- ============================================
+       SECTION 2 — SAMBUTAN / WELCOME
+       ============================================ -->
+  <section class="welcome" id="welcome">
+    <div class="welcome__inner reveal">
+      <span class="section-label">Mengenang</span>
+      <h2 class="welcome__heading">Sebuah Cinta yang Tak Pernah Pudar</h2>
+      <p class="welcome__text">
+        Bubu datang ke dalam hidup kami dengan ekor yang selalu bergoyang dan mata yang penuh kasih sayang.
+        Lebih dari sekadar peliharaan, Bubu adalah sahabat sejati — teman di kala senang,
+        penghibur di saat sedih, dan sumber kebahagiaan yang tak tergantikan setiap harinya.
+        Meski kini kau telah pergi, jejak kakimu akan selamanya terukir di hati kami.
+        Halaman ini kami persembahkan untukmu, Bubu — agar semua kenangan indah kita
+        tidak pernah dilupakan.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PAW DIVIDER
+       ============================================ -->
+  <div class="paw-divider" aria-hidden="true">🐾</div>
+
+
+  <!-- ============================================
+       SECTION 3 — GALERI FOTO
+       ============================================ -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__header reveal">
+      <span class="section-label">Momen Berharga</span>
+      <h2 class="gallery__heading">Galeri Kenangan</h2>
+      <p class="gallery__subtitle">Setiap foto menyimpan satu cerita cinta</p>
+    </div>
+
+    <div class="gallery__grid">
+      <!-- FOTO 1 — Ganti dengan foto Bubu asli -->
+      <div class="gallery__item reveal reveal-delay-1" data-index="0">
+        <img src="images/bubu-1.jpg" alt="Bubu — foto kenangan 1" loading="lazy" />
+      </div>
+
+      <!-- FOTO 2 — Sleepy Bubu in golden sunlight -->
+      <div class="gallery__item reveal reveal-delay-2" data-index="1">
+        <img src="images/bubu-2.jpg" alt="Bubu — tidur tenang di sofa dengan cahaya emas" loading="lazy" />
+      </div>
+
+      <!-- FOTO 3 — Puppy close-up face -->
+      <div class="gallery__item reveal reveal-delay-3" data-index="2">
+        <img src="images/bubu-3.png" alt="Bubu — wajah puppy yang menggemaskan" loading="lazy" />
+      </div>
+
+      <!-- FOTO 4 — B&W photo, being petted -->
+      <div class="gallery__item reveal reveal-delay-4" data-index="3">
+        <img src="images/bubu-4.jpg" alt="Bubu — momen penuh kasih sayang" loading="lazy" />
+      </div>
+
+      <!-- FOTO 5 — Face held in hand, eyes closed -->
+      <div class="gallery__item reveal reveal-delay-1" data-index="4">
+        <img src="images/bubu-5.jpg" alt="Bubu — wajah damai digenggam dengan lembut" loading="lazy" />
+      </div>
+
+      <!-- FOTO 6 — B&W girl with sleeping Bubu -->
+      <div class="gallery__item reveal reveal-delay-2" data-index="5">
+        <img src="images/bubu-6.png" alt="Bubu — bersama sahabat tercinta" loading="lazy" />
+      </div>
+
+      <!-- FOTO 7 — Selfie with Bubu -->
+      <div class="gallery__item reveal reveal-delay-3" data-index="6">
+        <img src="images/bubu-7.jpg" alt="Bubu — selfie penuh cinta" loading="lazy" />
+      </div>
+
+      <!-- FOTO 8 — Sleeping in blue crate -->
+      <div class="gallery__item reveal reveal-delay-4" data-index="7">
+        <img src="images/bubu-8.jpg" alt="Bubu — tidur nyenyak di keranjang" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PAW DIVIDER
+       ============================================ -->
+  <div class="paw-divider" aria-hidden="true">🐾</div>
+
+
+  <!-- ============================================
+       SECTION 4 — TIMELINE
+       ============================================ -->
+  <section class="timeline" id="timeline">
+    <div class="container">
+      <div class="timeline__header reveal">
+        <span class="section-label">Perjalanan Hidup</span>
+        <h2 class="timeline__heading">Cerita Bubu</h2>
+      </div>
+
+      <div class="timeline__track">
+        <!-- Milestone 1 — EDIT: Sesuaikan tanggal & cerita -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">Hari Pertama</span>
+          <h3 class="timeline__title">Bubu Datang ke Rumah 🏠</h3>
+          <p class="timeline__desc">
+            Hari yang mengubah segalanya. Bubu kecil datang dengan mata bulat penuh keingintahuan,
+            langsung mencuri hati semua orang di rumah.
+          </p>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">Momen Spesial</span>
+          <h3 class="timeline__title">Petualangan Pertama 🌿</h3>
+          <p class="timeline__desc">
+            Pertama kalinya Bubu berlari di taman — kaki-kaki mungilnya yang belum terbiasa dengan rumput,
+            tapi semangatnya luar biasa besar.
+          </p>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">Kenangan Terindah</span>
+          <h3 class="timeline__title">Sahabat Setia 💛</h3>
+          <p class="timeline__desc">
+            Bubu selalu ada — menunggu di depan pintu, tidur di kaki tempat tidur,
+            dan memberikan cinta tanpa syarat setiap hari.
+          </p>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">7 September 2026</span>
+          <h3 class="timeline__title">Selamat Jalan, Bubu 🌈</h3>
+          <p class="timeline__desc">
+            Bubu pergi dengan tenang, meninggalkan cinta yang tak akan pernah pudar.
+            Sampai kita bertemu lagi di Rainbow Bridge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PAW DIVIDER
+       ============================================ -->
+  <div class="paw-divider" aria-hidden="true">🐾</div>
+
+
+  <!-- ============================================
+       SECTION 5 — QUOTE
+       ============================================ -->
+  <section class="quote-section" id="quote">
+    <div class="quote__inner reveal">
+      <div class="quote__mark" aria-hidden="true">"</div>
+      <blockquote class="quote__text">
+        Dogs leave paw prints on our hearts that never fade, even when they leave our side.
+      </blockquote>
+      <cite class="quote__author">— cayla</cite>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PAW DIVIDER
+       ============================================ -->
+  <div class="paw-divider" aria-hidden="true">🐾</div>
+
+
+  <!-- ============================================
+       SECTION 6 — QR CODE
+       ============================================ -->
+  <section class="qr-section" id="qr-code">
+    <div class="qr__inner reveal">
+      <span class="section-label">Bagikan Kenangan</span>
+      <h2 class="qr__heading">Kenangan Digital</h2>
+      <p class="qr__subtitle">
+        Scan QR code di bawah ini untuk mengunjungi halaman kenangan Bubu
+        dan berbagi momen indah bersama orang-orang terkasih.
+      </p>
+
+      <div class="qr__frame">
+        <!-- Corner decorations -->
+        <span class="qr__corner-decor qr__corner-decor--tl" aria-hidden="true">🌿</span>
+        <span class="qr__corner-decor qr__corner-decor--br" aria-hidden="true">🌿</span>
+
+        <div class="qr__image-wrapper">
+          <img src="images/qr-code.png" alt="QR Code — Halaman Kenangan Bubu" loading="lazy" />
+        </div>
+      </div>
+
+      <p class="qr__caption">Scan untuk mengunjungi halaman kenangan Bubu</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PAW DIVIDER
+       ============================================ -->
+  <div class="paw-divider" aria-hidden="true">🐾</div>
+
+
+  <!-- ============================================
+       SECTION 7 — FOOTER
+       ============================================ -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <p class="footer__message">Forever in our hearts, <strong>BUBU</strong> 🐾</p>
+      <div class="footer__paws" aria-hidden="true">🐾 🐾 🐾</div>
+      <p class="footer__year">© 2026 — Dibuat dengan 💛 untuk Bubu</p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       LIGHTBOX (Gallery fullscreen viewer)
+       ============================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Viewer foto">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Tutup">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Foto sebelumnya">‹</button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Foto selanjutnya">›</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="Foto Bubu — fullscreen" />
+    <div class="lightbox__counter" id="lightbox-counter"></div>
+  </div>
+
+
+  <!-- ============================================
+       MUSIC PLAYER (Hidden YouTube Embed)
+       ============================================ -->
+  <div id="youtube-player-wrapper"
+    style="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;">
+    <div id="yt-player"></div>
+  </div>
+
+  <!-- Floating Music Control -->
+  <button class="music-control" id="music-control" aria-label="Toggle musik" title="Play/Pause musik">
+    <span class="music-control__icon" id="music-icon">♪</span>
+    <span class="music-control__bars" id="music-bars">
+      <span></span><span></span><span></span>
+    </span>
+  </button>
+
+
+  <!-- Scripts -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
