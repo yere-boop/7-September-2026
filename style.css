@@ -1790,3 +1790,118 @@ html, body {
   max-width: 100vw !important;
   max-height: 100vh !important;
 }
+
+/* ==========================================
+   MOBILE SCROLL PERFORMANCE — Critical Fix
+   ========================================== */
+
+/* GPU acceleration for scroll */
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mobile petal fall animation */
+@keyframes mobilePetalFall {
+  0%   { transform: translateY(-30px) rotate(0deg);   opacity: 0; }
+  10%  { opacity: 0.35; }
+  90%  { opacity: 0.35; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  /* DISABLE all layout-shifting animations on mobile */
+  .paw-divider {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.85 !important;
+  }
+
+  .qr__frame {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .timeline__dot {
+    animation: none !important;
+    box-shadow: 0 0 8px rgba(201,168,76,0.4) !important;
+  }
+
+  .gallery__item {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .gallery__item:hover {
+    transform: none !important;
+  }
+
+  /* Prevent content jumping during scroll */
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+  }
+
+  /* Disable heavy shimmer on mobile */
+  .hero__subtitle-top::after,
+  .section-label::after {
+    animation: none !important;
+    display: none !important;
+  }
+
+  /* Fix hero not jumping */
+  .hero__bg img {
+    transform: none !important;
+    will-change: auto !important;
+  }
+
+  /* Smooth touch scrolling */
+  section,
+  .gallery__grid,
+  .timeline__track {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Welcome card: remove blur (heavy on mobile) */
+  .welcome__inner {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(255,255,255,0.75) !important;
+  }
+
+  /* Disable gallery perspective (causes layout jank) */
+  .gallery__grid {
+    perspective: none !important;
+  }
+
+  /* Fix entrance name shimmer on mobile */
+  .entrance__name {
+    animation: none !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+
+  /* Entrance gradient too heavy - simplify */
+  .entrance-overlay {
+    animation: none !important;
+    background: #1A1714 !important;
+  }
+
+  /* Disable section wipe animation */
+  .section-wipe::before {
+    animation: none !important;
+    display: none !important;
+  }
+
+  /* Ensure music button stays in corner */
+  .music-control {
+    position: fixed !important;
+    bottom: 1.25rem !important;
+    right: 1.25rem !important;
+    z-index: 999 !important;
+  }
+}

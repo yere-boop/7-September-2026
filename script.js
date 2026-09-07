@@ -4,16 +4,28 @@
    Floating Petals, Sparkles, 3D Tilt
    =================================== */
 
+// Detect touch/mobile devices
+const isMobile = ('ontouchstart' in window) ||
+                 (navigator.maxTouchPoints > 0) ||
+                 (window.innerWidth <= 768);
+
 document.addEventListener('DOMContentLoaded', () => {
   initEntranceOverlay();
   initScrollReveal();
   initLightbox();
-  initParallaxHero();
   initMusicControl();
-  initFloatingPetals();
-  initSparkles();
-  initGallery3DTilt();
   initHeadingUnderlines();
+
+  // Heavy effects: desktop only
+  if (!isMobile) {
+    initParallaxHero();
+    initFloatingPetals();
+    initSparkles();
+    initGallery3DTilt();
+  } else {
+    // Mobile: lightweight petals only (fewer, slower)
+    initMobilePetals();
+  }
 });
 
 
@@ -380,4 +392,40 @@ function initHeadingUnderlines() {
   );
 
   headings.forEach(h => observer.observe(h));
+}
+
+
+/* ---------- Mobile Lightweight Petals (CSS-only, no canvas) ---------- */
+function initMobilePetals() {
+  const container = document.createElement('div');
+  container.style.cssText = `
+    position: fixed; inset: 0;
+    pointer-events: none; z-index: 1;
+    overflow: hidden;
+  `;
+  document.body.appendChild(container);
+
+  const EMOJIS = ['🌸','✨','🍂','🌼'];
+  const COUNT  = 8; // very few on mobile
+
+  for (let i = 0; i < COUNT; i++) {
+    const petal = document.createElement('div');
+    const emoji = EMOJIS[i % EMOJIS.length];
+    const left  = Math.random() * 90 + 5;       // 5–95%
+    const delay = Math.random() * 8;             // 0–8s
+    const dur   = Math.random() * 10 + 12;       // 12–22s
+    const size  = Math.random() * 10 + 10;       // 10–20px
+
+    petal.textContent = emoji;
+    petal.style.cssText = `
+      position: absolute;
+      left: ${left}%;
+      top: -30px;
+      font-size: ${size}px;
+      opacity: 0.35;
+      animation: mobilePetalFall ${dur}s ${delay}s linear infinite;
+      will-change: transform;
+    `;
+    container.appendChild(petal);
+  }
 }
