@@ -1580,3 +1580,56 @@ html, body { overflow-x: hidden; max-width: 100vw; }
     margin-bottom: 0.25rem !important;
   }
 }
+
+/* ==========================================
+   ENTRANCE TITLE FIX — Mobile (aggressive)
+   ========================================== */
+@media (max-width: 768px) {
+  .entrance__title {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.22em !important;
+    white-space: nowrap !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+
+  .entrance__name {
+    font-size: clamp(2.8rem, 15vw, 4.5rem) !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .entrance__subtitle {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  .entrance__note {
+    font-size: 0.70rem !important;
+    padding: 0 1.5rem !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .entrance__content {
+    width: 100% !important;
+    max-width: 340px !important;
+    padding: 2rem 1rem !important;
+    gap: 0.55rem !important;
+  }
+
+  .entrance__btn {
+    padding: 0.8rem 2rem !important;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.05em !important;
+    white-space: nowrap !important;
+  }
+
+  .entrance__paw {
+    font-size: 1.6rem !important;
+    margin-bottom: 0 !important;
+  }
+}
